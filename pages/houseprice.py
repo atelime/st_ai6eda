@@ -14,7 +14,7 @@ st.write('---')
 # Loads the House Price Dataset
 house = datasets.fetch_california_housing()
 X = pd.DataFrame(house.data, columns=house.feature_names)
-Y = pd.DataFrame(house.target, columns=["MEDV"])
+Y = pd.DataFrame(house.target, columns=[house.target_names])
 
 # Sidebar
 # Header of Specify Input Parameters
@@ -41,7 +41,7 @@ model.fit(X, Y)
 # Apply Model to Make Prediction
 prediction = model.predict(df)
 
-st.header('Prediction of MEDV')
+st.header(f'Prediction of {house.target_names}')
 st.write(prediction)
 st.write('---')
 
