@@ -6,16 +6,15 @@ from sklearn import datasets
 from sklearn.ensemble import RandomForestRegressor
 
 st.write("""
-# Boston House Price Prediction App
-
-This app predicts the **Boston House Price**!
+# House Price Prediction App
+This app predicts the ** House Price**!
 """)
 st.write('---')
 
 # Loads the House Price Dataset
 house = datasets.fetch_california_housing()
 X = pd.DataFrame(house.data, columns=house.feature_names)
-Y = pd.DataFrame(house.target, columns=["MEDV"]
+Y = pd.DataFrame(house.target, columns=["MEDV"])
 
 # Sidebar
 # Header of Specify Input Parameters
@@ -29,7 +28,6 @@ def user_input_features():
     return features
 
 df = user_input_features()
-
 # Main Panel
 
 # Print specified input parameters
