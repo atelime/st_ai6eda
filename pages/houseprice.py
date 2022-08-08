@@ -14,7 +14,7 @@ st.write('---')
 # Loads the House Price Dataset
 house = datasets.fetch_california_housing()
 X = pd.DataFrame(house.data, columns=house.feature_names)
-Y = pd.DataFrame(house.target, columns=[house.target_names])
+Y = pd.DataFrame(house.target, columns=["target"])
 
 # Sidebar
 # Header of Specify Input Parameters
